@@ -9,24 +9,8 @@ onready var grid_container := $GridContainer as GridContainer
 
 func _ready() -> void:
 	inventory = grid_container.get_children()
-	# Sadly, we can't randomize because we can't provide
-	# a dynamic solution. TODO: allow generating a solution
-	# var first_item_index := randi() % inventory.size()
-	# var second_item_index := first_item_index
-	# while second_item_index - first_item_index < 2:
-	#	second_item_index = randi() % inventory.size()
-	# The user can pick any tuple [ fire, lightning ], but
-	# we need to ensure there are at least 2 we know for sure
-	# make sure those indices are the same in `pick_items`
-	# at the bottom
-	var first_item_index := 6
-	var second_item_index := 8
 	for i in inventory.size():
 		var child = inventory[i]
-		if i == first_item_index:
-			child.texture = child.FIRE
-		elif i == second_item_index:
-			child.texture = child.LIGHTNING
 		child.connect("mouse_entered", self, "set_current_item", [child])
 		child.connect("mouse_exited", self, "set_current_item", [null])
 		child.connect("used", self, "_on_item_used")
@@ -77,9 +61,22 @@ func _run():
 
 
 # EXPORT pick
-var inventory = []
+var inventory = [
+	"health",
+	"ice",
+	"lightning",
+	"fire",
+	"gem",
+	"lightning",
+	"health",
+	"ice",
+	"fire",
+	"lightning",
+	"fire",
+	"health"
+]
 
 func pick_items():
-	use_item(inventory[6])
-	use_item(inventory[8])
+	use_item(inventory[3])
+	use_item(inventory[5])
 # /EXPORT pick

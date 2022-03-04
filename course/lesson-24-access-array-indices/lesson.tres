@@ -220,12 +220,25 @@ practice_id = "res://course/lesson-24-access-array-indices/practice-ErO9L4MW.tre
 title = "Using the right crystals"
 goal = "In our game, the player has an inventory that works as an array under the hood.
 
-They want to use the pink and yellow crystals to buff their characters. Like before, we need you to find them in the array.
+They want to use the fire  and lightning crystals to buff their characters. Like before, we need you to find them in the array.
 
 You need to access elements in the [code]inventory[/code] array by index to do so.
 
 Call the [code]use()[/code] function with the item as an argument to use an item. For example, you can use the first item by calling [code]use(inventory[0])[/code]."
-starting_code = "var inventory = []
+starting_code = "var inventory = [
+	\"health\",
+	\"ice\",
+	\"lightning\",
+	\"fire\",
+	\"gem\",
+	\"lightning\",
+	\"health\",
+	\"ice\",
+	\"fire\",
+	\"lightning\",
+	\"fire\",
+	\"health\"
+]
 
 func pick_items():
 	"

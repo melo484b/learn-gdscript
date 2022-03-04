@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://course/lesson-24-access-array-indices/visuals/inventory/Item.tscn" type="PackedScene" id=1]
 [ext_resource path="res://course/lesson-24-access-array-indices/find-crystals/FindCrystals.gd" type="Script" id=2]
+[ext_resource path="res://course/lesson-24-access-array-indices/visuals/inventory/pickup_gem.png" type="Texture" id=3]
+[ext_resource path="res://course/lesson-24-access-array-indices/visuals/inventory/pickup_lightning.png" type="Texture" id=4]
+[ext_resource path="res://course/lesson-24-access-array-indices/visuals/inventory/pickup_health.png" type="Texture" id=5]
+[ext_resource path="res://course/lesson-24-access-array-indices/visuals/inventory/pickup_fire.png" type="Texture" id=6]
+[ext_resource path="res://course/lesson-24-access-array-indices/visuals/inventory/pickup_ice.png" type="Texture" id=7]
 
 [node name="FindCrystals" type="CenterContainer"]
 anchor_right = 1.0
@@ -21,64 +26,76 @@ columns = 4
 [node name="Item" parent="GridContainer" instance=ExtResource( 1 )]
 margin_right = 120.0
 margin_bottom = 140.0
+texture = ExtResource( 5 )
 
 [node name="Item2" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 124.0
 margin_right = 244.0
 margin_bottom = 140.0
+texture = ExtResource( 7 )
 
 [node name="Item3" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 248.0
 margin_right = 368.0
 margin_bottom = 140.0
+texture = ExtResource( 4 )
 
 [node name="Item4" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 372.0
 margin_right = 492.0
 margin_bottom = 140.0
+texture = ExtResource( 6 )
 
 [node name="Item5" parent="GridContainer" instance=ExtResource( 1 )]
 margin_top = 144.0
 margin_right = 120.0
 margin_bottom = 284.0
+texture = ExtResource( 3 )
 
 [node name="Item6" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 124.0
 margin_top = 144.0
 margin_right = 244.0
 margin_bottom = 284.0
+texture = ExtResource( 4 )
 
 [node name="Item7" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 248.0
 margin_top = 144.0
 margin_right = 368.0
 margin_bottom = 284.0
+texture = ExtResource( 5 )
 
 [node name="Item8" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 372.0
 margin_top = 144.0
 margin_right = 492.0
 margin_bottom = 284.0
+texture = ExtResource( 7 )
 
 [node name="Item9" parent="GridContainer" instance=ExtResource( 1 )]
 margin_top = 288.0
 margin_right = 120.0
 margin_bottom = 428.0
+texture = ExtResource( 6 )
 
 [node name="Item10" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 124.0
 margin_top = 288.0
 margin_right = 244.0
 margin_bottom = 428.0
+texture = ExtResource( 4 )
 
 [node name="Item11" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 248.0
 margin_top = 288.0
 margin_right = 368.0
 margin_bottom = 428.0
+texture = ExtResource( 6 )
 
 [node name="Item12" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 372.0
 margin_top = 288.0
 margin_right = 492.0
 margin_bottom = 428.0
+texture = ExtResource( 5 )
